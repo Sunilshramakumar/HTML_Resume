@@ -4,138 +4,168 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sunil Kumar - Resume</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px auto;
-      max-width: 900px;
+      background: #fff;
       color: #333;
-      line-height: 1.5;
-      background-color: #fff;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
     }
-    h1, h2, h3 {
-      margin: 0 0 10px;
-      color: #222;
+    .resume-header h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
     }
-    h1 {
-      font-size: 2.4em;
-      margin-bottom: 5px;
+    .resume-header .contact a,
+    .resume-header .contact span {
+      display: block;
+      font-size: 0.9rem;
+      margin-top: 0.15rem;
+      word-break: break-word;
     }
-    h2 {
+    @media (min-width: 576px) {
+      .resume-header .contact a,
+      .resume-header .contact span {
+        display: inline-block;
+        margin-right: 1rem;
+      }
+    }
+    .resume-section h2 {
       border-bottom: 2px solid #333;
-      padding-bottom: 4px;
-      margin-top: 40px;
+      padding-bottom: 0.3rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      font-weight: 600;
     }
-    h3 {
-      font-weight: normal;
-      margin-top: 15px;
+    .section-list {
+      padding-left: 1.2rem;
     }
-    p {
-      margin: 6px 0;
-    }
-    .contact {
-      margin-bottom: 1em;
-    }
-    .contact a {
-      color: #1a0dab;
-      text-decoration: none;
-      margin-left: 6px;
-    }
-    ul {
-      padding-left: 20px;
-      margin-top: 6px;
-    }
-    ul li {
-      margin-bottom: 6px;
-    }
-    .section {
-      margin-bottom: 30px;
+    .section-list li {
+      margin-bottom: 0.5rem;
     }
     .job-title {
-      font-weight: bold;
-      font-size: 1em;
+      font-weight: 600;
+      font-size: 1.15rem;
     }
     .company {
       font-style: italic;
-      font-weight: normal;
+      color: #555;
     }
     .duration {
       font-style: italic;
-      color: #666;
-      margin-bottom: 10px;
+      color: #777;
+      margin-bottom: 0.75rem;
+    }
+    .project-title {
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+    p, ul {
+      margin-bottom: 0.75rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Sunil Kumar</h1>
-    <div class="contact">
-      <span>&#9742; 773-734-5847</span> |
-      <span>&#9993; sunil773734@gmail.com</span> |
-      <span>LinkedIn: <a href="https://www.linkedin.com/in/sunil-kumar-4bab15188/" target="_blank" rel="noopener">sunil-kumar-4bab15188</a></span>
-    </div>
-  </header>
+  <div class="container">
+    <header class="resume-header text-center mb-3">
+      <h1>Sunil Kumar</h1>
+      <div class="contact">
+        <span>&#9742; 773-734-5847</span>
+        <span>&#9993; <a href="mailto:sunil773734@gmail.com">sunil773734@gmail.com</a></span>
+        <span>LinkedIn: <a href="https://www.linkedin.com/in/sunil-kumar-4bab15188/" target="_blank" rel="noopener">sunil-kumar-4bab15188</a></span>
+      </div>
+    </header>
 
-  <section class="section about">
-    <h2>About Me</h2>
-    <p>Results-driven Java Backend Developer with 3+ years of experience in building scalable backend systems using Java, Spring Boot, RESTful APIs, and microservices. Proficient in data transformation, system integration, and cloud deployments, with added experience in React for building responsive front-end interfaces. Adept at writing clean, maintainable code aligned with business goals, and collaborating in Agile environments to drive innovation and performance.</p>
-  </section>
+    <section class="resume-section">
+      <h2>About Me</h2>
+      <p>Results-driven Java Backend Developer with 3+ years of experience in building scalable backend systems using Java, Spring Boot, RESTful APIs, and microservices. Proficient in data transformation, system integration, and cloud deployments, with added experience in React for building responsive front-end interfaces. Adept at writing clean, maintainable code aligned with business goals, and collaborating in Agile environments to drive innovation and performance.</p>
+    </section>
 
-  <section class="section skills">
-    <h2>Technical Skills</h2>
-    <p><strong>Languages:</strong> Java, SQL, JavaScript, HTML/CSS</p>
-    <p><strong>Frameworks &amp; Libraries:</strong> Spring Boot, React.js, Angular, RESTful APIs, SSMS</p>
-    <p><strong>Tools &amp; IDEs:</strong> IntelliJ IDEA, VS Code</p>
-    <p><strong>Concepts:</strong> RESTful APIs, Microservices, OOPs, MVC Architecture</p>
-    <p><strong>Version Control &amp; CI/CD:</strong> Git, GitHub, Jenkins</p>
-  </section>
+    <section class="resume-section">
+      <h2>Technical Skills</h2>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-4">
+          <strong>Languages:</strong>
+          <ul class="section-list">
+            <li>Java</li>
+            <li>SQL</li>
+            <li>JavaScript</li>
+            <li>HTML/CSS</li>
+          </ul>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <strong>Frameworks &amp; Libraries:</strong>
+          <ul class="section-list">
+            <li>Spring Boot</li>
+            <li>React.js</li>
+            <li>Angular</li>
+            <li>RESTful APIs</li>
+            <li>SSMS</li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4">
+          <strong>Tools, Concepts &amp; Version Control:</strong>
+          <ul class="section-list">
+            <li>IntelliJ IDEA, VS Code</li>
+            <li>RESTful APIs, Microservices, OOPs, MVC Architecture</li>
+            <li>Git, GitHub, Jenkins</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  <section class="section experience">
-    <h2>Work Experience</h2>
-    <div class="job">
-      <h3 class="job-title">Full Stack Developer</h3>
-      <p class="company">InTimeTec, Jaipur (Rajasthan)</p>
-      <p class="duration">Feb 2022 – Present</p>
-      <ul>
-        <li>Developed and maintained scalable microservices using Java, Spring Boot, and RESTful APIs, ensuring robust backend performance and seamless integration across services.</li>
-        <li>Built dynamic and responsive user interfaces with React, enhancing user experience and enabling efficient interaction with backend APIs.</li>
-        <li>Implemented core backend modules in Java, including exception handling, logging, and utility services, to support clean architecture and improve code reusability.</li>
-        <li>Automated cloud deployments and resource management by integrating Java applications with AWS services via AWS SDK and CLI, improving scalability and operational efficiency.</li>
-      </ul>
-    </div>
-  </section>
+    <section class="resume-section">
+      <h2>Work Experience</h2>
+      <div>
+        <div class="job-title">Full Stack Developer</div>
+        <div class="company">InTimeTec, Jaipur (Rajasthan)</div>
+        <div class="duration">Feb 2022 – Present</div>
+        <ul class="section-list">
+          <li>Developed and maintained scalable microservices using Java, Spring Boot, and RESTful APIs, ensuring robust backend performance and seamless integration across services.</li>
+          <li>Built dynamic and responsive user interfaces with React, enhancing user experience and enabling efficient interaction with backend APIs.</li>
+          <li>Implemented core backend modules in Java, including exception handling, logging, and utility services, to support clean architecture and improve code reusability.</li>
+          <li>Automated cloud deployments and resource management by integrating Java applications with AWS services via AWS SDK and CLI, improving scalability and operational efficiency.</li>
+        </ul>
+      </div>
+    </section>
 
-  <section class="section projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>HRMS</h3>
-      <p><strong>Technologies:</strong> Java, Spring Boot, React, Microservices</p>
-      <p>Developed and maintained a scalable Human Resource Management System using Java, Spring Boot, and microservices architecture, integrating modules for employee, attendance, payroll, and performance management.</p>
-      <p>Designed and implemented RESTful APIs for seamless communication between backend services and the React-based frontend, ensuring a responsive and intuitive user experience.</p>
-      <p>Managed SQL Server databases and improved query performance by 50% through indexing strategies and query optimization.</p>
-    </div>
+    <section class="resume-section">
+      <h2>Projects</h2>
+      <div>
+        <div class="project-title">HRMS</div>
+        <div><em>Java, Spring Boot, React, Microservices</em></div>
+        <p>Developed and maintained a scalable Human Resource Management System using Java, Spring Boot, and microservices architecture, integrating modules for employee, attendance, payroll, and performance management.</p>
+        <p>Designed and implemented RESTful APIs for seamless communication between backend services and the React-based frontend, ensuring a responsive and intuitive user experience.</p>
+        <p>Managed SQL Server databases and improved query performance by 50% through indexing strategies and query optimization.</p>
+      </div>
 
-    <div class="project">
-      <h3>Blue Cross of Idaho (BCI)</h3>
-      <p><strong>Technologies:</strong> Java, Spring Boot, AWS Services</p>
-      <p>Developed and deployed scalable data transformation pipelines using Java, Spring Boot, and AWS Lambda, enabling efficient processing of health insurance data and aligning with project-specific requirements.</p>
-      <p>Built automated workflows using AWS services (S3, DynamoDB, Glue, CloudWatch) for data storage, monitoring, and analysis boosting system efficiency by 50% and ensuring compliance with health insurance data exchange standards.</p>
-    </div>
+      <div>
+        <div class="project-title">Blue Cross of Idaho (BCI)</div>
+        <div><em>Java, Spring Boot, AWS Services</em></div>
+        <p>Developed and deployed scalable data transformation pipelines using Java, Spring Boot, and AWS Lambda, enabling efficient processing of health insurance data and aligning with project-specific requirements.</p>
+        <p>Built automated workflows using AWS services (S3, DynamoDB, Glue, CloudWatch) for data storage, monitoring, and analysis—boosting system efficiency by 50% and ensuring compliance with health insurance data exchange standards.</p>
+      </div>
 
-    <div class="project">
-      <h3>Sports Management System</h3>
-      <p><strong>Technologies:</strong> Java, Spring Boot, React, MYSQL</p>
-      <p>Engineered a scalable sports management platform using Java, Spring Boot, and MySQL for backend services, and React for building dynamic, user-friendly interfaces supporting event creation, participant tracking,and real-time notifications.</p>
-      <p>Designed custom scheduling algorithms and modeled workflows using UML behavioral diagrams, applying SOLID principles to ensure modular, maintainable, and extensible architecture.</p>
-    </div>
-  </section>
+      <div>
+        <div class="project-title">Sports Management System</div>
+        <div><em>Java, Spring Boot, React, MYSQL</em></div>
+        <p>Engineered a scalable sports management platform using Java, Spring Boot, and MySQL for backend services, and React for building dynamic, user-friendly interfaces supporting event creation, participant tracking, and real-time notifications.</p>
+        <p>Designed custom scheduling algorithms and modeled workflows using UML behavioral diagrams, applying SOLID principles to ensure modular, maintainable, and extensible architecture.</p>
+      </div>
+    </section>
 
-  <section class="section education">
-    <h2>Education</h2>
-    <p><strong>Poornima Group Of Institutions</strong></p>
-    <p>Bachelor of Science in Computer Science: CGPA: 8.3</p>
-    <p>Sep. 2018 – May 2022</p>
-    <p>Jaipur, Rajasthan, India</p>
-  </section>
+    <section class="resume-section">
+      <h2>Education</h2>
+      <p><strong>Poornima Group Of Institutions</strong></p>
+      <p>Bachelor of Science in Computer Science: CGPA : 8.9</p>
+      <p>Sep. 2018 – May 2022</p>
+      <p>Jaipur, Rajasthan, India</p>
+    </section>
+  </div>
+
+  <!-- Bootstrap JS Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
